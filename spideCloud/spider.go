@@ -1,14 +1,14 @@
 package spideCloud
 
 import (
-	"bestCloud/httputil"
 	"fmt"
 	"github.com/PuerkitoBio/goquery"
+	"github.com/caojiehz/httpUtil"
 	"strings"
 )
 
 func Spider() (cdns []CdnRegion) {
-	data, err := httputil.Get(httputil.GetParasTuple{
+	data, err := httpUtil.Get(httpUtil.GetParasTuple{
 		URL:      "https://www.feitsui.com/zh-hans/blog/page/11",
 		RetryNum: 1,
 	})
